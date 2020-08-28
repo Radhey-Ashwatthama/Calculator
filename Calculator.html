@@ -1,69 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <style media="screen">
-      body{
-        background-color: #616A6B;
-      }
-      table{
-        background-color: #A93226;
-        width:250px;
-        height:250px; 
-
-      }
-
-    </style>
-  </head>
-  <center>
-  <body>
-    <h1>hello</h1>
-  /*  <table border="1">
-      <label for=""><h1>My Calculator</h1></label>
-      <tr>
-      <td colspan="3"><input type="text" id="result"/></td>
-            <!-- clr() function will call clr to clear all value -->
-            <td><input type="button" value="c" onclick="clr()"/> </td>
-         </tr>
-         <tr>
-            <!-- create button and assign value to each button -->
-            <!-- dis("1") will call function dis to display value -->
-            <td><input type="button" value="1" onclick="dis('1')"/> </td>
-            <td><input type="button" value="2" onclick="dis('2')"/> </td>
-            <td><input type="button" value="3" onclick="dis('3')"/> </td>
-            <td><input type="button" value="/" onclick="dis('/')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="4" onclick="dis('4')"/> </td>
-            <td><input type="button" value="5" onclick="dis('5')"/> </td>
-            <td><input type="button" value="6" onclick="dis('6')"/> </td>
-            <td><input type="button" value="-" onclick="dis('-')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="7" onclick="dis('7')"/> </td>
-            <td><input type="button" value="8" onclick="dis('8')"/> </td>
-            <td><input type="button" value="9" onclick="dis('9')"/> </td>
-            <td><input type="button" value="+" onclick="dis('+')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="." onclick="dis('.')"/> </td>
-            <td><input type="button" value="0" onclick="dis('0')"/> </td>
-            <!-- solve function call function solve to evaluate value -->
-            <td><input type="button" value="=" onclick="solve()"/> </td>
-            <td><input type="button" value="" onclick="dis('')"/> </td>
-         </tr>
-      </table>
-
-
-
-      </tr>
-
-      </tr>
-
-    </table>
-
-*/
-  </body>
-  </center>
+<html>
+ <head>
+  <title>calculator</title>
+  <style>
+   body{
+    background:rgba(46,108,41,0.9);
+   }
+  .whole{
+   background-color: lightgrey;
+   width:300px;
+   border:5px;
+   padding: 10px 1px 10px 10px;
+   margin:20px 500px;
+   box-shadow:0px 5px 5px 5px rgba(0,0,0,0.7);
+  }
+  input[type="button"]{
+   padding:20px;
+   margin:10px;
+   box-shadow:0px 2px 2px 2px rgba(0,0,0,0.3);
+  }
+  input[type="button"]:hover{
+   background-color:rgb(194, 207, 197);
+  }
+  <!--.title{ 
+    text-align:center; 
+    width:300px; 
+    color:green; 
+    border: solid black 2px;
+	background:lightgrey;
+	position:relative;
+	left:500px;
+	bottom:5px;
+	}-->
+  #clear{
+   width:80%;
+   height:30px;
+   
+  }    
+   
+  </style>
+ </head>
+ <body>
+  
+ <div class="whole"> 
+  <form name="calculator">
+   <h1>My Calculator</h1>
+   <input type="text" name="answer" id="clear"/>
+   <br><br>
+   <input type="button" value="1" onclick="calculator.answer.value+='1'"/>
+   <input type="button" value="2" onclick="calculator.answer.value+='2'"/>
+   <input type="button" value="3" onclick="calculator.answer.value+='3'"/>
+   <input type="button" value="+" onclick="calculator.answer.value+='+'"/>
+   <br><br>
+   <input type="button" value="4"  onclick="calculator.answer.value+='4'"/>
+   <input type="button" value="5"  onclick="calculator.answer.value+='5'"/>
+   <input type="button" value="6"  onclick="calculator.answer.value+='6'"/>
+   <input type="button" value="-"  onclick="calculator.answer.value+='-'"/>
+   <br><br>
+   <input type="button" value="7"  onclick="calculator.answer.value+='7'"/>
+   <input type="button" value="8"  onclick="calculator.answer.value+='8'"/>
+   <input type="button" value="9"  onclick="calculator.answer.value+='9'"/>
+   <input type="button" value="*"  onclick="calculator.answer.value+='*'"/>
+   <br><br>
+   <input type="button" value="c" onclick="calculator.answer.value=''"/>
+   <input type="button" value="0"  onclick="calculator.answer.value+='0'"/>
+   <input type="button" value="="  onclick="calculator.answer.value=eval(calculator.answer.value)"/>
+   <input type="button" value="/"  onclick="calculator.answer.value+='/'"/>
+  </form> 
+ </div>  
+ </body>
 </html>
